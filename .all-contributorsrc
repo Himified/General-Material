@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "sakshijain009",
+      "name": "Sakshi Jain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62885857?v=4",
+      "profile": "https://github.com/sakshijain009",
+      "contributions": [
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "General-Material",
+  "projectOwner": "Himified",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
