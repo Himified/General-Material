@@ -7,7 +7,7 @@ All the best!
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -16,13 +16,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
  
 
-@himified
+Himani Verma
     <td align="center"><a href="https://github.com/Himified"><img src="https://avatars.githubusercontent.com/u/62880286?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Himani Verma</b></sub></a><br /><a href="#content-Himified" title="Content">🖋🤔</a></td>
     
-@sakshijain009
+Sakshi Jain
     <td align="center"><a href="https://github.com/sakshijain009"><img src="https://avatars.githubusercontent.com/u/62885857?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sakshi Jain</b></sub></a><br /><a href="#ideas-sakshijain009" title="Ideas, Planning, & Feedback">🖋🤔</a></td>
     
- @geek-2002
+ Sankirtana
     <td align="center"><a href="https://twitter.com/Sankirtana212"><img src="https://avatars.githubusercontent.com/u/59257797?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sankirtana</b></sub></a><br /><a href="#content-geek-2002" title="Content">🖋🤔</a></td>
 
 
