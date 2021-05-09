@@ -13,21 +13,26 @@
       "profile": "https://github.com/sakshijain009",
       "contributions": [
         "ideas"
-
+          ]
+    },
+    {
  all-contributors/add-geek-2002
       "login": "geek-2002",
       "name": "Sankirtana",
       "avatar_url": "https://avatars.githubusercontent.com/u/59257797?v=4",
       "profile": "https://twitter.com/Sankirtana212",
-
+"contributions": [
+        "content"
+         ]
+    },
+    {
+    all-contributors/add-himified
       "login": "Himified",
       "name": "Himani Verma",
       "avatar_url": "https://avatars.githubusercontent.com/u/62880286?v=4",
       "profile": "https://github.com/Himified",
- main
       "contributions": [
         "content"
- main
       ]
     }
   ],
