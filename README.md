@@ -1,3 +1,3 @@
 # General-Material
-General study material for sem 3 and sem 4<br>
+General study material for Sem 3 and Sem 4<br>
 All the best!
