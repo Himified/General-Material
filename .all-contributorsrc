@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "geek-2002",
+      "name": "Sankirtana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59257797?v=4",
+      "profile": "https://twitter.com/Sankirtana212",
+      "contributions": [
+        "content"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "General-Material",
+  "projectOwner": "Himified",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
