@@ -14,7 +14,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
+ all-contributors/add-geek-2002
     <td align="center"><a href="https://twitter.com/Sankirtana212"><img src="https://avatars.githubusercontent.com/u/59257797?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sankirtana</b></sub></a><br /><a href="#content-geek-2002" title="Content">🖋</a></td>
+
+    <td align="center"><a href="https://github.com/Himified"><img src="https://avatars.githubusercontent.com/u/62880286?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Himani Verma</b></sub></a><br /><a href="#content-Himified" title="Content">🖋</a></td>
+ main
   </tr>
 </table>
 
