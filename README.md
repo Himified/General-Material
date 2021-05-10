@@ -1,7 +1,7 @@
 # General-Material
 
-General study material for Sem 3 and Sem 4<br>
-All the best!
+General study material for Sem 3 and Sem 4 for B.Tech students<br>
+Hope it helps, all the best!
 
 ## Contributors ✨
 
