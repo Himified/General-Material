@@ -6,7 +6,8 @@ You can either download the zip of the entire repo or clone it in your pc.
 git clone https://github.com/Himified/General-Material.git
 ```
 If you want to use a particular pdf or study material, you might need to download it keeping in mind the too large files may not open in github itself. We have also included notes and question paper.<br>
-Hope it helps, all the best!
+_Hope it helps, all the best!_<br><br>
+PS: If you want to contribute any material to the repo to make it more resourceful, feel free to do so ;)
 
 ## Contributors ✨
 
