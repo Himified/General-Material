@@ -3,7 +3,7 @@
 Hey there juniors, hope you're doing well! We have created a repo to provide with some references and general study material for Sem 3 and Sem 4 (CSE).<br>
 You can either download the zip of the entire repo or clone it in your pc.
 ```
-git clone
+git clone https://github.com/Himified/General-Material.git
 ```
 If you want to use a particular pdf or study material, you might need to download it keeping in mind the too large files may not open in github itself.<br>
 Hope it helps, all the best!
