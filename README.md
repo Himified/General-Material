@@ -1,6 +1,6 @@
 # General-Material 🧑‍🎓
 
-Hey there juniors, hope you're doing well! We have created a repo to provide with some references and general study material for Sem 3 and Sem 4 (CSE).<br><br>
+Hey there juniors, hope you're doing well! We have created a repo to provide with some references and general study material for 2nd and 3rd years (CSE).<br><br>
 You can either download the zip of the entire repo or clone it in your pc.
 ```
 git clone https://github.com/Himified/General-Material.git
