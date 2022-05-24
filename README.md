@@ -1,4 +1,4 @@
-# General-Material 🧑‍🎓
+# SVNIT-General-Material 🧑‍🎓
 
 Hey there juniors, hope you're doing well! We have created a repo to provide with some references and general study material for 2nd and 3rd years (CSE).<br><br>
 You can either download the zip of the entire repo or clone it in your pc.
