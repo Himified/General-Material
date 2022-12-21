@@ -1,0 +1,205 @@
+Dijsktra Semaphore
+
+#define p	0
+#define v	1
+
+chan sema = [0] of { bit };
+
+proctype dijkstra()
+{	byte count = 1;
+
+    do
+    :: (count == 1) ->
+        sema!p; count = 0
+    :: (count == 0) ->
+        sema?v; count = 1
+    od	
+}
+
+proctype user()
+{	do
+    :: sema?p;
+        /*     critical section */
+        sema!v;
+        /* non-critical section */
+    od
+}
+
+init
+{	run dijkstra();
+    run user();
+    run user();
+    run user()
+}
+
+--------------------------------------------------------------------------
+Cargo problem diivide in two channels
+
+#define N    128
+#define size  16
+
+chan in    = [size] of { short };
+chan large = [size] of { short };
+chan small = [size] of { short };
+
+proctype split()
+{	short cargo;
+
+    do
+    :: in?cargo ->
+        if
+        :: (cargo >= N) ->
+            large!cargo
+        :: (cargo <  N) ->
+            small!cargo
+        fi
+    od
+}
+
+    proctype merge()
+{	short cargo;
+
+    do
+    ::	if
+        :: large?cargo
+        :: small?cargo
+        fi;
+        in!cargo
+    od
+}
+
+init
+{	
+    in!345; in!12; in!6777;
+    in!32;  in!0;
+    run split();
+    run merge()
+}
+
+-------------------------------------
+The AB protocol- sender and receiver
+
+mtype = { msg, ack };
+chan to_sndr = [2] of { mtype, bit };
+chan to_rcvr = [2] of { mtype, bit};
+
+active proctype Sender ()
+{	bool seq_out, seq_in;
+	do
+	:: to_rcvr ! msg (seq_out) ->
+		to_sndr ? ack (seq_in);
+		if
+		:: seq_in == seq_out ->
+			seq_out = 1 – seq_out;
+		:: else
+		fi
+	od
+} 
+
+active proctype Receiver ()
+{	bool seq_in;
+	do
+	:: to_rcvr ? msg (seq_in) ->
+		to_sndr ! ack (seq_in)
+	:: timeout ->
+		to_sndr ! ack (seq_in)
+	od
+	
+}
+
+----------------------------------------
+Peterson's Algorithm
+
+bool turn, flag[2];
+byte cnt;
+
+active [2] proctype P ()
+{
+	pid i, j;
+	i = _pid;
+	j = 1 - _pid;
+
+again:
+	flag[i] = true;
+	turn = i;
+	(flag[j] == false || turn != i) -> /* wait until true */
+	cnt ++;
+	assert (cnt == 1);
+	cnt --;
+	flag[i] = false;
+	goto again;
+}
+
+--------------------------------------
+Rendezvous
+
+mtype = { msgtype };
+chan name = [0] of { mtype, byte };
+active proctype A ()
+{
+    name ! msgtype (124);
+    name ! msgtype (121)
+}
+active proctype B ()
+{
+    byte state;
+    name ? msgtype (state);
+}
+
+--------------------------------------
+Passing Channels
+
+mtype = { msgtype };
+chan glob = [0] of { chan };
+
+active proctype A ()
+{
+   chan loc = [0] of { mtype, byte };
+   glob ! loc;
+   loc ? msgtype (121)
+}
+
+active proctype B ()
+{
+    chan who;
+    glob ? who;
+    who ! msgtype (121)
+}
+
+--------------------------------------------
+A data exchange protocol
+
+mtype = { ini, ack, dreq, data, shutup, quiet, dead }
+chan M = [1] of { mtype };
+chan W = [1] of { mtype };
+
+active proctype Mproc ()
+{
+	W!ini;
+	M?ack;
+	if
+	:: W!shutup
+	:: W!dreq;
+		M?data ->
+		do
+		:: W!data
+		:: W!shutup;
+			break
+		od
+	fi
+	M?shutup;
+	W!quiet;
+	M?dead
+}
+active proctype Wproc ()
+{
+	W?ini;
+	M!ack;
+	do
+	:: W?dreq -> M!data
+	:: W?data -> skip
+	:: W?shutup -> M!shutup; break
+	od;
+	W?quiet;
+	M!dead
+}

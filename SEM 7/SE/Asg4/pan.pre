@@ -1,0 +1,26 @@
+# 0 "q4.pml"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "q4.pml"
+
+chan c = [6] of {byte};
+chan d = [true] of {bool};
+byte fullness = 0;
+active proctype producer(){
+ byte data;
+ do
+  :: fullness < 5 -> fullness = fullness +1;
+  c ! data;
+  data ++;
+  printf("Item produced\n")
+ od
+}
+active proctype consumer(){
+ byte data;
+ do
+  :: c ? data; fullness = fullness -1; printf("Item consumed\n")
+ od
+}
+active proctype monitor(){
+ assert(fullness <= 5 );
+}
